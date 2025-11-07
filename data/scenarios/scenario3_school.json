@@ -1,0 +1,97 @@
+{
+  "name": "Scenario 3: Elementary School",
+  "description": "Two-floor school - classrooms share walls, realistic layout",
+  
+  "building": {
+    "name": "Elementary School",
+    "floors": 2,
+    
+    "rooms": [
+      {"id": "Class_101", "floor": 1, "type": "classroom", "area": 48, "position": {"x": 3.5, "y": 3.5}, "occupancy": 25, "priority": 2, "check_complexity": 1.5},
+      {"id": "Class_102", "floor": 1, "type": "classroom", "area": 48, "position": {"x": 3.5, "y": 10.5}, "occupancy": 25, "priority": 2, "check_complexity": 1.5},
+      {"id": "Class_103", "floor": 1, "type": "classroom", "area": 48, "position": {"x": 3.5, "y": 17.5}, "occupancy": 25, "priority": 2, "check_complexity": 1.5},
+      {"id": "Science_Lab", "floor": 1, "type": "lab", "area": 60, "position": {"x": 3.9, "y": 25.7}, "occupancy": 20, "priority": 3, "check_complexity": 2.0},
+      
+      {"id": "Restroom_B1", "floor": 1, "type": "restroom", "area": 20, "position": {"x": 13.2, "y": 2.2}, "occupancy": 5, "priority": 1, "check_complexity": 1.8},
+      {"id": "Restroom_G1", "floor": 1, "type": "restroom", "area": 20, "position": {"x": 13.2, "y": 6.7}, "occupancy": 5, "priority": 1, "check_complexity": 1.8},
+      {"id": "Library", "floor": 1, "type": "library", "area": 80, "position": {"x": 13.5, "y": 14}, "occupancy": 30, "priority": 2, "check_complexity": 2.2},
+      {"id": "Cafeteria", "floor": 1, "type": "cafeteria", "area": 100, "position": {"x": 13.5, "y": 24}, "occupancy": 50, "priority": 2, "check_complexity": 1.8},
+      
+      {"id": "Class_201", "floor": 2, "type": "classroom", "area": 48, "position": {"x": 3.5, "y": 3.5}, "occupancy": 25, "priority": 2, "check_complexity": 1.5},
+      {"id": "Class_202", "floor": 2, "type": "classroom", "area": 48, "position": {"x": 3.5, "y": 10.5}, "occupancy": 25, "priority": 2, "check_complexity": 1.5},
+      {"id": "Class_203", "floor": 2, "type": "classroom", "area": 48, "position": {"x": 3.5, "y": 17.5}, "occupancy": 25, "priority": 2, "check_complexity": 1.5},
+      {"id": "Computer_Lab", "floor": 2, "type": "computer_lab", "area": 60, "position": {"x": 3.9, "y": 25.7}, "occupancy": 24, "priority": 2, "check_complexity": 1.7},
+      
+      {"id": "Restroom_B2", "floor": 2, "type": "restroom", "area": 20, "position": {"x": 13.2, "y": 2.2}, "occupancy": 5, "priority": 1, "check_complexity": 1.8},
+      {"id": "Restroom_G2", "floor": 2, "type": "restroom", "area": 20, "position": {"x": 13.2, "y": 6.7}, "occupancy": 5, "priority": 1, "check_complexity": 1.8},
+      {"id": "Art_Room", "floor": 2, "type": "art_room", "area": 54, "position": {"x": 13.7, "y": 13.7}, "occupancy": 20, "priority": 2, "check_complexity": 2.0},
+      {"id": "Music_Room", "floor": 2, "type": "music_room", "area": 54, "position": {"x": 13.7, "y": 21}, "occupancy": 20, "priority": 2, "check_complexity": 1.6}
+    ],
+    
+    "corridors": [
+      {"id": "Hall_1F", "start": {"x": 9, "y": -1}, "end": {"x": 9, "y": 30}, "floor": 1, "width": 2.5},
+      {"id": "Hall_2F", "start": {"x": 9, "y": -1}, "end": {"x": 9, "y": 30}, "floor": 2, "width": 2.5}
+    ],
+    
+    "exits": [
+      {"id": "Main_Entrance", "position": {"x": 9, "y": -1}, "floor": 1},
+      {"id": "Back_Exit", "position": {"x": 9, "y": 30}, "floor": 1},
+      {"id": "Side_Exit", "position": {"x": 17, "y": 14}, "floor": 1}
+    ],
+    
+    "stairs": [],
+    
+    "connections": [
+      {"from": "Main_Entrance", "to": "Hall_1F", "distance": 0},
+      {"from": "Back_Exit", "to": "Hall_1F", "distance": 0},
+      
+      {"from": "Hall_1F", "to": "Class_101", "distance": 5.5},
+      {"from": "Hall_1F", "to": "Class_102", "distance": 5.5},
+      {"from": "Hall_1F", "to": "Class_103", "distance": 5.5},
+      {"from": "Hall_1F", "to": "Science_Lab", "distance": 5.5},
+      {"from": "Hall_1F", "to": "Restroom_B1", "distance": 4.2},
+      {"from": "Hall_1F", "to": "Restroom_G1", "distance": 4.2},
+      {"from": "Hall_1F", "to": "Library", "distance": 4.5},
+      {"from": "Hall_1F", "to": "Cafeteria", "distance": 4.5},
+      {"from": "Library", "to": "Side_Exit", "distance": 4},
+      
+      {"from": "Hall_1F", "to": "Hall_2F", "distance": 8},
+      
+      {"from": "Hall_2F", "to": "Class_201", "distance": 5.5},
+      {"from": "Hall_2F", "to": "Class_202", "distance": 5.5},
+      {"from": "Hall_2F", "to": "Class_203", "distance": 5.5},
+      {"from": "Hall_2F", "to": "Computer_Lab", "distance": 5.5},
+      {"from": "Hall_2F", "to": "Restroom_B2", "distance": 4.2},
+      {"from": "Hall_2F", "to": "Restroom_G2", "distance": 4.2},
+      {"from": "Hall_2F", "to": "Art_Room", "distance": 4.7},
+      {"from": "Hall_2F", "to": "Music_Room", "distance": 4.7}
+    ]
+  },
+  
+  "responders": {
+    "count": 3,
+    "capabilities": {
+      "walk_speed": 1.5,
+      "stair_up_speed": 0.4,
+      "stair_down_speed": 0.7,
+      "check_rate": 1.0,
+      "base_check_time": 12
+    },
+    "initial_positions": [
+      {"responder_id": 1, "location": "Main_Entrance"},
+      {"responder_id": 2, "location": "Back_Exit"},
+      {"responder_id": 3, "location": "Side_Exit"}
+    ]
+  },
+  
+  "scenario": {
+    "emergency_type": "fire",
+    "fire_origin": "Science_Lab",
+    "max_time": 900,
+    "strategy": {
+      "redundancy": false,
+      "dynamic_replan": false
+    },
+    "notes": "School: classrooms share walls, compact realistic layout"
+  }
+}

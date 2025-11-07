@@ -1,0 +1,134 @@
+{
+  "name": "Scenario 1: Basic Office Building",
+  "description": "Single floor office building - 3 offices on each side of corridor, rooms share walls",
+  
+  "building": {
+    "name": "Basic Office Building",
+    "floors": 1,
+    
+    "rooms": [
+      {
+        "id": "R1",
+        "floor": 1,
+        "type": "office",
+        "area": 16,
+        "position": {"x": 2, "y": 2},
+        "occupancy": 4,
+        "priority": 1,
+        "check_complexity": 1.0
+      },
+      {
+        "id": "R2",
+        "floor": 1,
+        "type": "office",
+        "area": 16,
+        "position": {"x": 2, "y": 6},
+        "occupancy": 4,
+        "priority": 1,
+        "check_complexity": 1.0
+      },
+      {
+        "id": "R3",
+        "floor": 1,
+        "type": "office",
+        "area": 16,
+        "position": {"x": 2, "y": 10},
+        "occupancy": 4,
+        "priority": 1,
+        "check_complexity": 1.0
+      },
+      {
+        "id": "R4",
+        "floor": 1,
+        "type": "office",
+        "area": 16,
+        "position": {"x": 8, "y": 2},
+        "occupancy": 4,
+        "priority": 1,
+        "check_complexity": 1.0
+      },
+      {
+        "id": "R5",
+        "floor": 1,
+        "type": "office",
+        "area": 16,
+        "position": {"x": 8, "y": 6},
+        "occupancy": 4,
+        "priority": 1,
+        "check_complexity": 1.0
+      },
+      {
+        "id": "R6",
+        "floor": 1,
+        "type": "office",
+        "area": 16,
+        "position": {"x": 8, "y": 10},
+        "occupancy": 4,
+        "priority": 1,
+        "check_complexity": 1.0
+      }
+    ],
+    
+    "corridors": [
+      {
+        "id": "Main_Corridor",
+        "start": {"x": 5, "y": -1},
+        "end": {"x": 5, "y": 13},
+        "floor": 1,
+        "width": 2.0
+      }
+    ],
+    
+    "exits": [
+      {
+        "id": "North_Exit",
+        "position": {"x": 5, "y": -1},
+        "floor": 1
+      },
+      {
+        "id": "South_Exit",
+        "position": {"x": 5, "y": 13},
+        "floor": 1
+      }
+    ],
+    
+    "stairs": [],
+    
+    "connections": [
+      {"from": "North_Exit", "to": "Main_Corridor", "distance": 0},
+      {"from": "Main_Corridor", "to": "R1", "distance": 3},
+      {"from": "Main_Corridor", "to": "R2", "distance": 3},
+      {"from": "Main_Corridor", "to": "R3", "distance": 3},
+      {"from": "Main_Corridor", "to": "R4", "distance": 3},
+      {"from": "Main_Corridor", "to": "R5", "distance": 3},
+      {"from": "Main_Corridor", "to": "R6", "distance": 3},
+      {"from": "Main_Corridor", "to": "South_Exit", "distance": 0}
+    ]
+  },
+  
+  "responders": {
+    "count": 2,
+    "capabilities": {
+      "walk_speed": 1.5,
+      "stair_up_speed": 0.4,
+      "stair_down_speed": 0.7,
+      "check_rate": 1.0,
+      "base_check_time": 10
+    },
+    "initial_positions": [
+      {"responder_id": 1, "location": "North_Exit"},
+      {"responder_id": 2, "location": "South_Exit"}
+    ]
+  },
+  
+  "scenario": {
+    "emergency_type": "fire",
+    "fire_origin": null,
+    "max_time": 600,
+    "strategy": {
+      "redundancy": false,
+      "dynamic_replan": false
+    },
+    "notes": "Realistic layout: 10m x 12m building, 4m x 4m offices, rooms share walls, 2m corridor"
+  }
+}
