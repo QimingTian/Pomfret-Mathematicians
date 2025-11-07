@@ -1,6 +1,6 @@
 {
   "name": "Scenario 2: Three-Floor Office Building",
-  "description": "Multi-floor office building with varying room sizes",
+  "description": "Multi-floor office with stairs connecting floors",
   
   "building": {
     "name": "Three-Floor Office Building",
@@ -9,47 +9,50 @@
     "rooms": [
       {"id": "R1_1", "floor": 1, "type": "office", "area": 16, "position": {"x": 2, "y": 2}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
       {"id": "R1_2", "floor": 1, "type": "office", "area": 16, "position": {"x": 2, "y": 6}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
-      {"id": "R1_3", "floor": 1, "type": "conference", "area": 32, "position": {"x": 2, "y": 10}, "occupancy": 12, "priority": 1, "check_complexity": 1.2},
-      {"id": "R1_4", "floor": 1, "type": "office", "area": 16, "position": {"x": 2, "y": 14}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
+      {"id": "R1_3", "floor": 1, "type": "conference", "area": 32, "position": {"x": 2, "y": 14}, "occupancy": 12, "priority": 1, "check_complexity": 1.2},
+      {"id": "R1_4", "floor": 1, "type": "office", "area": 16, "position": {"x": 2, "y": 18}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
       
       {"id": "R1_5", "floor": 1, "type": "office", "area": 16, "position": {"x": 8, "y": 2}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
       {"id": "R1_6", "floor": 1, "type": "office", "area": 16, "position": {"x": 8, "y": 6}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
-      {"id": "R1_7", "floor": 1, "type": "storage", "area": 24, "position": {"x": 8, "y": 10}, "occupancy": 0, "priority": 1, "check_complexity": 1.5},
-      {"id": "R1_8", "floor": 1, "type": "office", "area": 16, "position": {"x": 8, "y": 14}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
+      {"id": "R1_7", "floor": 1, "type": "storage", "area": 24, "position": {"x": 8, "y": 14}, "occupancy": 0, "priority": 1, "check_complexity": 1.5},
+      {"id": "R1_8", "floor": 1, "type": "office", "area": 16, "position": {"x": 8, "y": 18}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
       
       {"id": "R2_1", "floor": 2, "type": "office", "area": 16, "position": {"x": 2, "y": 2}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
       {"id": "R2_2", "floor": 2, "type": "office", "area": 16, "position": {"x": 2, "y": 6}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
-      {"id": "R2_3", "floor": 2, "type": "lab", "area": 28, "position": {"x": 2, "y": 10}, "occupancy": 6, "priority": 2, "check_complexity": 1.8},
-      {"id": "R2_4", "floor": 2, "type": "office", "area": 16, "position": {"x": 2, "y": 14}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
+      {"id": "R2_3", "floor": 2, "type": "lab", "area": 28, "position": {"x": 2, "y": 14}, "occupancy": 6, "priority": 2, "check_complexity": 1.8},
+      {"id": "R2_4", "floor": 2, "type": "office", "area": 16, "position": {"x": 2, "y": 18}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
       
       {"id": "R2_5", "floor": 2, "type": "office", "area": 16, "position": {"x": 8, "y": 2}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
       {"id": "R2_6", "floor": 2, "type": "office", "area": 16, "position": {"x": 8, "y": 6}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
-      {"id": "R2_7", "floor": 2, "type": "office", "area": 16, "position": {"x": 8, "y": 10}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
-      {"id": "R2_8", "floor": 2, "type": "office", "area": 16, "position": {"x": 8, "y": 14}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
+      {"id": "R2_7", "floor": 2, "type": "office", "area": 16, "position": {"x": 8, "y": 14}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
+      {"id": "R2_8", "floor": 2, "type": "office", "area": 16, "position": {"x": 8, "y": 18}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
       
       {"id": "R3_1", "floor": 3, "type": "office", "area": 16, "position": {"x": 2, "y": 2}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
       {"id": "R3_2", "floor": 3, "type": "office", "area": 16, "position": {"x": 2, "y": 6}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
-      {"id": "R3_3", "floor": 3, "type": "server_room", "area": 24, "position": {"x": 2, "y": 10}, "occupancy": 2, "priority": 2, "check_complexity": 1.5},
-      {"id": "R3_4", "floor": 3, "type": "office", "area": 16, "position": {"x": 2, "y": 14}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
+      {"id": "R3_3", "floor": 3, "type": "server_room", "area": 24, "position": {"x": 2, "y": 14}, "occupancy": 2, "priority": 2, "check_complexity": 1.5},
+      {"id": "R3_4", "floor": 3, "type": "office", "area": 16, "position": {"x": 2, "y": 18}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
       
       {"id": "R3_5", "floor": 3, "type": "office", "area": 16, "position": {"x": 8, "y": 2}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
       {"id": "R3_6", "floor": 3, "type": "office", "area": 16, "position": {"x": 8, "y": 6}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
-      {"id": "R3_7", "floor": 3, "type": "office", "area": 16, "position": {"x": 8, "y": 10}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
-      {"id": "R3_8", "floor": 3, "type": "executive", "area": 20, "position": {"x": 8, "y": 14}, "occupancy": 2, "priority": 1, "check_complexity": 1.1}
+      {"id": "R3_7", "floor": 3, "type": "office", "area": 16, "position": {"x": 8, "y": 14}, "occupancy": 4, "priority": 1, "check_complexity": 1.0},
+      {"id": "R3_8", "floor": 3, "type": "executive", "area": 20, "position": {"x": 8, "y": 18}, "occupancy": 2, "priority": 1, "check_complexity": 1.1}
     ],
     
     "corridors": [
-      {"id": "C1", "start": {"x": 5, "y": -1}, "end": {"x": 5, "y": 17}, "floor": 1, "width": 2.0},
-      {"id": "C2", "start": {"x": 5, "y": -1}, "end": {"x": 5, "y": 17}, "floor": 2, "width": 2.0},
-      {"id": "C3", "start": {"x": 5, "y": -1}, "end": {"x": 5, "y": 17}, "floor": 3, "width": 2.0}
+      {"id": "C1", "start": {"x": 5, "y": -1}, "end": {"x": 5, "y": 21}, "floor": 1, "width": 2.0},
+      {"id": "C2", "start": {"x": 5, "y": -1}, "end": {"x": 5, "y": 21}, "floor": 2, "width": 2.0},
+      {"id": "C3", "start": {"x": 5, "y": -1}, "end": {"x": 5, "y": 21}, "floor": 3, "width": 2.0}
     ],
     
     "exits": [
       {"id": "E1", "position": {"x": 5, "y": -1}, "floor": 1},
-      {"id": "E2", "position": {"x": 5, "y": 17}, "floor": 1}
+      {"id": "E2", "position": {"x": 5, "y": 21}, "floor": 1}
     ],
     
-    "stairs": [],
+    "stairs": [
+      {"id": "Stair_West", "position": {"x": 2, "y": 10}, "connects": [1, 2, 3]},
+      {"id": "Stair_East", "position": {"x": 8, "y": 10}, "connects": [1, 2, 3]}
+    ],
     
     "connections": [
       {"from": "E1", "to": "C1", "distance": 0},
@@ -57,31 +60,43 @@
       
       {"from": "C1", "to": "R1_1", "distance": 3},
       {"from": "C1", "to": "R1_2", "distance": 3},
+      {"from": "C1", "to": "Stair_West", "distance": 3},
       {"from": "C1", "to": "R1_3", "distance": 3},
       {"from": "C1", "to": "R1_4", "distance": 3},
+      
       {"from": "C1", "to": "R1_5", "distance": 3},
       {"from": "C1", "to": "R1_6", "distance": 3},
+      {"from": "C1", "to": "Stair_East", "distance": 3},
       {"from": "C1", "to": "R1_7", "distance": 3},
       {"from": "C1", "to": "R1_8", "distance": 3},
       
-      {"from": "C1", "to": "C2", "distance": 5},
-      {"from": "C2", "to": "C3", "distance": 5},
+      {"from": "Stair_West", "to": "C2", "distance": 4},
+      {"from": "Stair_East", "to": "C2", "distance": 4},
       
       {"from": "C2", "to": "R2_1", "distance": 3},
       {"from": "C2", "to": "R2_2", "distance": 3},
+      {"from": "C2", "to": "Stair_West", "distance": 3},
       {"from": "C2", "to": "R2_3", "distance": 3},
       {"from": "C2", "to": "R2_4", "distance": 3},
+      
       {"from": "C2", "to": "R2_5", "distance": 3},
       {"from": "C2", "to": "R2_6", "distance": 3},
+      {"from": "C2", "to": "Stair_East", "distance": 3},
       {"from": "C2", "to": "R2_7", "distance": 3},
       {"from": "C2", "to": "R2_8", "distance": 3},
       
+      {"from": "Stair_West", "to": "C3", "distance": 4},
+      {"from": "Stair_East", "to": "C3", "distance": 4},
+      
       {"from": "C3", "to": "R3_1", "distance": 3},
       {"from": "C3", "to": "R3_2", "distance": 3},
+      {"from": "C3", "to": "Stair_West", "distance": 3},
       {"from": "C3", "to": "R3_3", "distance": 3},
       {"from": "C3", "to": "R3_4", "distance": 3},
+      
       {"from": "C3", "to": "R3_5", "distance": 3},
       {"from": "C3", "to": "R3_6", "distance": 3},
+      {"from": "C3", "to": "Stair_East", "distance": 3},
       {"from": "C3", "to": "R3_7", "distance": 3},
       {"from": "C3", "to": "R3_8", "distance": 3}
     ]
@@ -111,6 +126,6 @@
       "redundancy": false,
       "dynamic_replan": false
     },
-    "notes": "3-floor office: 10m x 16m per floor. Rooms have varying sizes (16-32m²) but displayed uniformly for clean layout. Conference room (32m²), lab (28m²), storage (24m²), executive (20m²), standard office (16m²)."
+    "notes": "3-floor office with 2 stairwells (west and east). Left: R1-R2-[Stair]-R3-R4. Right: R5-R6-[Stair]-R7-R8. Display size 4x4m, actual areas vary (16-32m²)."
   }
 }
