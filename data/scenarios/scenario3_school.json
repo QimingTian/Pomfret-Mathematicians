@@ -9,37 +9,38 @@
     "rooms": [
       {"id": "Class_101", "floor": 1, "type": "classroom", "area": 48, "position": {"x": 2, "y": 2}, "occupancy": 25, "priority": 2, "check_complexity": 1.5},
       {"id": "Class_102", "floor": 1, "type": "classroom", "area": 48, "position": {"x": 2, "y": 6}, "occupancy": 25, "priority": 2, "check_complexity": 1.5},
-      {"id": "Science_Lab", "floor": 1, "type": "lab", "area": 60, "position": {"x": 2, "y": 14}, "occupancy": 20, "priority": 3, "check_complexity": 2.0},
-      {"id": "Art_Room", "floor": 1, "type": "art_room", "area": 54, "position": {"x": 2, "y": 18}, "occupancy": 20, "priority": 2, "check_complexity": 1.8},
+      {"id": "Science_Lab", "floor": 1, "type": "lab", "area": 60, "position": {"x": 2, "y": 12}, "occupancy": 20, "priority": 3, "check_complexity": 2.0},
+      {"id": "Art_Room", "floor": 1, "type": "art_room", "area": 54, "position": {"x": 2, "y": 16}, "occupancy": 20, "priority": 2, "check_complexity": 1.8},
       
       {"id": "Restroom_B1", "floor": 1, "type": "restroom", "area": 20, "position": {"x": 8, "y": 2}, "occupancy": 5, "priority": 1, "check_complexity": 1.8},
       {"id": "Restroom_G1", "floor": 1, "type": "restroom", "area": 20, "position": {"x": 8, "y": 6}, "occupancy": 5, "priority": 1, "check_complexity": 1.8},
-      {"id": "Library", "floor": 1, "type": "library", "area": 80, "position": {"x": 8, "y": 14}, "occupancy": 30, "priority": 2, "check_complexity": 2.2},
-      {"id": "Office", "floor": 1, "type": "office", "area": 12, "position": {"x": 8, "y": 18}, "occupancy": 3, "priority": 1, "check_complexity": 1.0},
+      {"id": "Library", "floor": 1, "type": "library", "area": 80, "position": {"x": 8, "y": 12}, "occupancy": 30, "priority": 2, "check_complexity": 2.2},
+      {"id": "Office", "floor": 1, "type": "office", "area": 12, "position": {"x": 8, "y": 16}, "occupancy": 3, "priority": 1, "check_complexity": 1.0},
       
       {"id": "Class_201", "floor": 2, "type": "classroom", "area": 48, "position": {"x": 2, "y": 2}, "occupancy": 25, "priority": 2, "check_complexity": 1.5},
       {"id": "Class_202", "floor": 2, "type": "classroom", "area": 48, "position": {"x": 2, "y": 6}, "occupancy": 25, "priority": 2, "check_complexity": 1.5},
-      {"id": "Computer_Lab", "floor": 2, "type": "computer_lab", "area": 60, "position": {"x": 2, "y": 14}, "occupancy": 24, "priority": 2, "check_complexity": 1.7},
-      {"id": "Music_Room", "floor": 2, "type": "music_room", "area": 54, "position": {"x": 2, "y": 18}, "occupancy": 20, "priority": 2, "check_complexity": 1.6},
+      {"id": "Computer_Lab", "floor": 2, "type": "computer_lab", "area": 60, "position": {"x": 2, "y": 12}, "occupancy": 24, "priority": 2, "check_complexity": 1.7},
+      {"id": "Music_Room", "floor": 2, "type": "music_room", "area": 54, "position": {"x": 2, "y": 16}, "occupancy": 20, "priority": 2, "check_complexity": 1.6},
       
       {"id": "Restroom_B2", "floor": 2, "type": "restroom", "area": 20, "position": {"x": 8, "y": 2}, "occupancy": 5, "priority": 1, "check_complexity": 1.8},
       {"id": "Restroom_G2", "floor": 2, "type": "restroom", "area": 20, "position": {"x": 8, "y": 6}, "occupancy": 5, "priority": 1, "check_complexity": 1.8},
-      {"id": "Gym", "floor": 2, "type": "gym", "area": 100, "position": {"x": 8, "y": 14}, "occupancy": 40, "priority": 2, "check_complexity": 1.5},
-      {"id": "Cafeteria", "floor": 2, "type": "cafeteria", "area": 90, "position": {"x": 8, "y": 18}, "occupancy": 50, "priority": 2, "check_complexity": 1.8}
+      {"id": "Gym", "floor": 2, "type": "gym", "area": 100, "position": {"x": 8, "y": 12}, "occupancy": 40, "priority": 2, "check_complexity": 1.5},
+      {"id": "Cafeteria", "floor": 2, "type": "cafeteria", "area": 90, "position": {"x": 8, "y": 16}, "occupancy": 50, "priority": 2, "check_complexity": 1.8}
     ],
     
     "corridors": [
-      {"id": "Hall_1F", "start": {"x": 5, "y": -1}, "end": {"x": 5, "y": 21}, "floor": 1, "width": 2.5},
-      {"id": "Hall_2F", "start": {"x": 5, "y": -1}, "end": {"x": 5, "y": 21}, "floor": 2, "width": 2.5}
+      {"id": "Hall_1F", "start": {"x": 5, "y": -1}, "end": {"x": 5, "y": 19}, "floor": 1, "width": 2.5},
+      {"id": "Hall_2F", "start": {"x": 5, "y": -1}, "end": {"x": 5, "y": 19}, "floor": 2, "width": 2.5}
     ],
     
     "exits": [
       {"id": "Main_Entrance", "position": {"x": 5, "y": -1}, "floor": 1},
-      {"id": "Back_Exit", "position": {"x": 5, "y": 21}, "floor": 1}
+      {"id": "Back_Exit", "position": {"x": 5, "y": 19}, "floor": 1}
     ],
     
     "stairs": [
-      {"id": "Main_Stair", "position": {"x": 5, "y": 10}, "connects": [1, 2]}
+      {"id": "Stair_West", "position": {"x": 2, "y": 9}, "connects": [1, 2]},
+      {"id": "Stair_East", "position": {"x": 8, "y": 9}, "connects": [1, 2]}
     ],
     
     "connections": [
@@ -48,25 +49,28 @@
       
       {"from": "Hall_1F", "to": "Class_101", "distance": 3},
       {"from": "Hall_1F", "to": "Class_102", "distance": 3},
-      {"from": "Hall_1F", "to": "Main_Stair", "distance": 2},
+      {"from": "Hall_1F", "to": "Stair_West", "distance": 3},
       {"from": "Hall_1F", "to": "Science_Lab", "distance": 3},
       {"from": "Hall_1F", "to": "Art_Room", "distance": 3},
       
       {"from": "Hall_1F", "to": "Restroom_B1", "distance": 3},
       {"from": "Hall_1F", "to": "Restroom_G1", "distance": 3},
+      {"from": "Hall_1F", "to": "Stair_East", "distance": 3},
       {"from": "Hall_1F", "to": "Library", "distance": 3},
       {"from": "Hall_1F", "to": "Office", "distance": 3},
       
-      {"from": "Main_Stair", "to": "Hall_2F", "distance": 4},
+      {"from": "Stair_West", "to": "Hall_2F", "distance": 4},
+      {"from": "Stair_East", "to": "Hall_2F", "distance": 4},
       
       {"from": "Hall_2F", "to": "Class_201", "distance": 3},
       {"from": "Hall_2F", "to": "Class_202", "distance": 3},
-      {"from": "Hall_2F", "to": "Main_Stair", "distance": 2},
+      {"from": "Hall_2F", "to": "Stair_West", "distance": 3},
       {"from": "Hall_2F", "to": "Computer_Lab", "distance": 3},
       {"from": "Hall_2F", "to": "Music_Room", "distance": 3},
       
       {"from": "Hall_2F", "to": "Restroom_B2", "distance": 3},
       {"from": "Hall_2F", "to": "Restroom_G2", "distance": 3},
+      {"from": "Hall_2F", "to": "Stair_East", "distance": 3},
       {"from": "Hall_2F", "to": "Gym", "distance": 3},
       {"from": "Hall_2F", "to": "Cafeteria", "distance": 3}
     ]

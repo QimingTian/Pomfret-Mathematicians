@@ -51,6 +51,11 @@ class BlueprintDrawer:
         for exit_id, exit_data in floor_exits.items():
             self._draw_exit_blueprint(ax, exit_data, exit_id)
         
+        # Draw stairs on this floor
+        for stair_id, stair_data in self.building.stairs.items():
+            if self.floor_num in stair_data.get('connects', []):
+                self._draw_stair_blueprint(ax, stair_data, stair_id)
+        
         # Add dimension lines
         self._add_dimensions(ax, floor_rooms)
         
@@ -229,6 +234,41 @@ class BlueprintDrawer:
                color='#27AE60',
                bbox=dict(boxstyle='round,pad=0.5', facecolor='white', 
                         edgecolor='#27AE60', linewidth=2, alpha=0.9),
+               zorder=10)
+    
+    def _draw_stair_blueprint(self, ax, stair_data, stair_id):
+        """Draw stairwell"""
+        x, y = stair_data['position']
+        
+        # Stairwell box (2x2 meters)
+        stair_rect = patches.Rectangle(
+            (x - 1, y - 1), 2, 2,
+            linewidth=2.5,
+            edgecolor='#8E44AD',
+            facecolor='#D7BDE2',
+            alpha=0.7,
+            zorder=8
+        )
+        ax.add_patch(stair_rect)
+        
+        # Stair lines (diagonal lines to represent steps)
+        n_steps = 6
+        for i in range(n_steps):
+            y_step = y - 0.8 + i * 1.6 / n_steps
+            ax.plot([x - 0.8, x + 0.8], [y_step, y_step],
+                   color='#8E44AD', linewidth=1.5, alpha=0.8, zorder=9)
+        
+        # Label
+        connects_str = '-'.join(map(str, stair_data['connects']))
+        ax.text(x, y + 0.3, stair_id,
+               ha='center', va='center',
+               fontsize=8, fontweight='bold',
+               color='#8E44AD',
+               zorder=10)
+        ax.text(x, y - 0.3, f'F{connects_str}',
+               ha='center', va='center',
+               fontsize=7,
+               color='#8E44AD',
                zorder=10)
     
     def _determine_door_side(self, room):
