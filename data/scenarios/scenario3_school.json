@@ -35,8 +35,7 @@
     
     "exits": [
       {"id": "Main_Entrance", "position": {"x": 5, "y": -1}, "floor": 1},
-      {"id": "Back_Exit", "position": {"x": 5, "y": 17}, "floor": 1},
-      {"id": "Side_Exit", "position": {"x": 10, "y": 8}, "floor": 1}
+      {"id": "Back_Exit", "position": {"x": 5, "y": 17}, "floor": 1}
     ],
     
     "stairs": [],
@@ -53,7 +52,6 @@
       {"from": "Hall_1F", "to": "Restroom_G1", "distance": 3},
       {"from": "Hall_1F", "to": "Library", "distance": 3},
       {"from": "Hall_1F", "to": "Office", "distance": 3},
-      {"from": "Library", "to": "Side_Exit", "distance": 4},
       
       {"from": "Hall_1F", "to": "Hall_2F", "distance": 8},
       
@@ -80,7 +78,7 @@
     "initial_positions": [
       {"responder_id": 1, "location": "Main_Entrance"},
       {"responder_id": 2, "location": "Back_Exit"},
-      {"responder_id": 3, "location": "Side_Exit"}
+      {"responder_id": 3, "location": "Main_Entrance"}
     ]
   },
   
