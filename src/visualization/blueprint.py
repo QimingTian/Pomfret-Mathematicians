@@ -218,43 +218,17 @@ class BlueprintDrawer:
                    zorder=6)
     
     def _draw_exit_blueprint(self, ax, exit_data, exit_id):
-        """Draw exit with professional symbols"""
+        """Draw exit with simple text label"""
         x, y = exit_data['position']
         
-        # Exit sign box
-        rect = patches.FancyBboxPatch(
-            (x - 2, y - 1),
-            4, 2,
-            boxstyle="round,pad=0.1",
-            linewidth=2.5,
-            edgecolor='#27AE60',
-            facecolor='#D5F4E6',
-            zorder=10
-        )
-        ax.add_patch(rect)
-        
-        # EXIT text
-        ax.text(x, y, 'EXIT',
+        # Simple EXIT label
+        ax.text(x, y, f'EXIT\n{exit_id}',
                ha='center', va='center',
-               fontsize=10, fontweight='bold',
+               fontsize=11, fontweight='bold',
                color='#27AE60',
-               zorder=11)
-        
-        # Exit arrow
-        arrow = patches.FancyArrow(
-            x, y - 2.5, 0, -1.5,
-            width=0.5, head_width=1.2, head_length=0.5,
-            fc='#27AE60', ec='#27AE60',
-            zorder=10
-        )
-        ax.add_patch(arrow)
-        
-        # Exit ID
-        ax.text(x, y - 4.5, exit_id,
-               ha='center', va='center',
-               fontsize=9, fontweight='bold',
-               color='#27AE60',
-               zorder=11)
+               bbox=dict(boxstyle='round,pad=0.5', facecolor='white', 
+                        edgecolor='#27AE60', linewidth=2, alpha=0.9),
+               zorder=10)
     
     def _determine_door_side(self, room):
         """Determine which side the door should be on (toward corridor)"""
