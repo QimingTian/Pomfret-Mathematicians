@@ -152,7 +152,8 @@ class BlueprintDrawer:
     def _draw_room_blueprint(self, ax, room):
         """Draw room with walls, door toward corridor, and annotations"""
         x, y = room.position
-        size = np.sqrt(room.area)
+        # Use FIXED display size for uniform layout (actual area shown in label)
+        size = 4.0  # All rooms displayed as 4x4 squares
         
         # Determine door position based on corridor location
         door_side = self._determine_door_side(room)

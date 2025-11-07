@@ -105,7 +105,8 @@ class BlueprintGenerator:
     def _draw_room(self, ax, room):
         """Draw room with walls and door"""
         x, y = room.position
-        size = np.sqrt(room.area)
+        # Use FIXED display size for uniform layout
+        size = 4.0  # All rooms displayed as 4x4 squares
         
         # Walls
         wall_color = '#2C3E50'
