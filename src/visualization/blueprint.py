@@ -11,14 +11,21 @@ import os
 class BlueprintDrawer:
     """Draw professional architectural blueprints"""
     
-    def __init__(self, building, floor_num=1):
+    def __init__(self, building, floor_num=1, node_building=None):
         self.building = building
         self.floor_num = floor_num
         self.wall_thickness = 0.2  # meters
         self.door_width = 1.0      # meters
+        self.node_building = node_building  # Optional: NodeBasedBuilding for showing nodes
         
-    def draw_blueprint(self, save_path=None, show=False):
-        """Generate professional blueprint"""
+    def draw_blueprint(self, save_path=None, show=False, show_nodes=False):
+        """Generate professional blueprint
+        
+        Args:
+            save_path: Path to save figure
+            show: Whether to display the plot
+            show_nodes: Whether to show navigation nodes
+        """
         # Create figure with blueprint style
         fig, ax = plt.subplots(figsize=(16, 12))
         
@@ -55,6 +62,10 @@ class BlueprintDrawer:
         for stair_id, stair_data in self.building.stairs.items():
             if self.floor_num in stair_data.get('connects', []):
                 self._draw_stair_blueprint(ax, stair_data, stair_id)
+        
+        # Draw navigation nodes if requested
+        if show_nodes and self.node_building:
+            self._draw_navigation_nodes(ax)
         
         # Add dimension lines
         self._add_dimensions(ax, floor_rooms)
@@ -405,6 +416,50 @@ class BlueprintDrawer:
                rotation=90,
                bbox=dict(boxstyle='round', facecolor='white', 
                         edgecolor='black', linewidth=0.5))
+    
+    def _draw_navigation_nodes(self, ax):
+        """Draw navigation nodes from NodeBasedBuilding"""
+        if not self.node_building:
+            return
+        
+        # Define node styles
+        node_styles = {
+            'room_center': {'color': '#2ECC71', 'marker': 'o', 'size': 80, 'label': 'Room Center'},
+            'door': {'color': '#E67E22', 'marker': 's', 'size': 60, 'label': 'Door Node'},
+            'corridor': {'color': '#3498DB', 'marker': '.', 'size': 30, 'label': 'Corridor Point'},
+            'stair': {'color': '#9B59B6', 'marker': '^', 'size': 100, 'label': 'Stair Node'},
+            'exit': {'color': '#E74C3C', 'marker': '*', 'size': 120, 'label': 'Exit Node'}
+        }
+        
+        # Group nodes by type for this floor
+        nodes_by_type = {node_type: [] for node_type in node_styles.keys()}
+        
+        for node_id, node_data in self.node_building.nodes.items():
+            if node_data.get('floor', 1) == self.floor_num:
+                node_type = node_data['type']
+                pos = node_data['position']
+                if node_type in nodes_by_type:
+                    nodes_by_type[node_type].append(pos)
+        
+        # Draw nodes by type
+        for node_type, positions in nodes_by_type.items():
+            if positions:
+                style = node_styles[node_type]
+                xs = [p[0] for p in positions]
+                ys = [p[1] for p in positions]
+                ax.scatter(xs, ys, 
+                          c=style['color'], 
+                          marker=style['marker'], 
+                          s=style['size'],
+                          alpha=0.7,
+                          edgecolors='black',
+                          linewidths=1.0,
+                          zorder=10,
+                          label=style['label'])
+        
+        # Add node legend
+        ax.legend(loc='upper right', fontsize=8, framealpha=0.95, 
+                 edgecolor='black', title='Navigation Nodes', title_fontsize=9)
     
     def _add_legend(self, ax):
         """Add professional legend"""

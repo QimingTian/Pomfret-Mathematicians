@@ -109,7 +109,7 @@
   "responders": {
     "count": 2,
     "capabilities": {
-      "walk_speed": 1.5,
+      "walk_speed": 1.79,
       "stair_up_speed": 0.4,
       "stair_down_speed": 0.7,
       "check_rate": 1.0,
